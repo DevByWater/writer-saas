@@ -1,10 +1,15 @@
 import Vue from 'vue'
+import VueQuillEditor from 'vue-quill-editor'
 
 import App from './App'
 import router from './router'
 import store from './store'
 
-if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
+if (!process.env.IS_WEB) {
+  Vue.use(require('vue-electron'))
+  Vue.use(VueQuillEditor)
+}
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
